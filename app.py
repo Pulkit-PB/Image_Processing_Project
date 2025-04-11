@@ -23,7 +23,7 @@ st.markdown("""
 st.markdown("""
 <div style='background-color: #e0dede; padding: 20px; border-radius: 8px;'>
     <h1 style='text-align: center; color: #160148'>🎨 Image Editor Web App</h1>
-    <p style='text-align: center; color: #160148''>Upload an image and apply filters like grayscale, sepia, sharpen, smoothing, manual cropping, and more.</p>
+    <p style='text-align: center; color: #160148''>Just Upload an image<br> And <br> Apply filters like grayscale, sepia, sharpen, smoothing, manual cropping, and more.</p>
 </div>
 """, unsafe_allow_html=True)
 
