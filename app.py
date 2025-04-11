@@ -96,12 +96,22 @@ if uploaded_file:
         processed_img = cv2.Canny(gray, 100, 200)
 
     st.markdown("---")
-    st.subheader("🖼️ Processed Image")
+st.subheader("🖼️ Original vs Processed Image")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("**Original Image**")
+    st.image(image, use_container_width=True)
+
+with col2:
+    st.markdown("**Processed Image**")
     if len(processed_img.shape) == 2:
-        st.image(processed_img, caption="Final Output", use_container_width=True, channels="GRAY")
+        st.image(processed_img, use_container_width=True, channels="GRAY")
     else:
         img_rgb = cv2.cvtColor(processed_img, cv2.COLOR_BGR2RGB)
-        st.image(img_rgb, caption="Final Output", use_container_width=True)
+        st.image(img_rgb, use_container_width=True)
+
 
     st.markdown("---")
     st.subheader("⬇️ Download Your Image")
